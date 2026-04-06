@@ -87,8 +87,24 @@
 
 /* 5.신라숍배너 */
 #wrap main .shop_banner_wrap {}
+#wrap main .shop_banner_wrap h1 {}
+#wrap main .shop_banner_wrap p {}
+#wrap main .shop_banner_wrap .shop_box {}
+#wrap main .shop_banner_wrap .shop_box p {}
 /* 6.스페셜오퍼 */
 #wrap main .special_offers_wrap {}
+#wrap main .special_offers_wrap .offer_swiper {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides a {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides a img {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text p:nth-child(1){}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text p:nth-child(2){}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text h2 {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text h2 a {}
+#wrap main .special_offers_wrap .offer_swiper .prev {}
+#wrap main .special_offers_wrap .offer_swiper .next {}
 /* 7.멤버십 */
 #wrap main .shilla_membership_wrap {}
 /* ==================================footer */
