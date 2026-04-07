@@ -61,51 +61,87 @@
 #wrap main .shillahotel_info h1 {}
 #wrap main .shillahotel_info .more_info {}
 #wrap main .shillahotel_info .more_info span {}
-#wrap main .shillahotel_info .more_info p{}
+#wrap main .shillahotel_info .more_info p:nth-child(1) {}
+#wrap main .shillahotel_info .more_info p:nth-child(2) {}
 /* 3.객실 */
 #wrap main .room_wrap {}
 #wrap main .room_wrap .room_swiper {}
 #wrap main .room_wrap .room_swiper .swiper-wrapper {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .prev {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .next {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides a {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides a img {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main a {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main a img {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main .main_text {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main .main_text .mt_title {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main .main_text .mt_title h2 {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main .main_text .mt_title h2 p {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main .main_text .mt_room {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main .main_text .mt_room a {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main .main_text .mt_more {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main .main_text .mt_more a {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slides .room_main .main_text .mt_more a img {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .prev {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .next {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide a {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide a img {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main a {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main a img {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_title {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_title h2 {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_title h2 p {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_room {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_room a {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_more {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_more a {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_more a img {}
 /* 4.다이닝 */
 
 /* 5.신라숍배너 */
 #wrap main .shop_banner_wrap {}
 #wrap main .shop_banner_wrap h1 {}
-#wrap main .shop_banner_wrap p {}
+#wrap main .shop_banner_wrap h1+p {}
 #wrap main .shop_banner_wrap .shop_box {}
 #wrap main .shop_banner_wrap .shop_box p {}
 /* 6.스페셜오퍼 */
 #wrap main .special_offers_wrap {}
 #wrap main .special_offers_wrap .offer_swiper {}
 #wrap main .special_offers_wrap .offer_swiper .swiper-wrapper {}
-#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides {}
-#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides a {}
-#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides a img {}
-#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text {}
-#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text p:nth-child(1){}
-#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text p:nth-child(2){}
-#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text h2 {}
-#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slides .offers_text h2 a {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide a {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide a img {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide .offers_text {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide .offers_text p:nth-child(1){}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide .offers_text p:nth-child(2){}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide .offers_text h2 {}
+#wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide .offers_text h2 a {}
 #wrap main .special_offers_wrap .offer_swiper .prev {}
 #wrap main .special_offers_wrap .offer_swiper .next {}
 /* 7.멤버십 */
 #wrap main .shilla_membership_wrap {}
+#wrap main .shilla_membership_wrap .mbmbership_s {}
+#wrap main .shilla_membership_wrap .mbmbership_s .sms_text {}
+#wrap main .shilla_membership_wrap .mbmbership_s .sms_text p {}
+#wrap main .shilla_membership_wrap .mbmbership_s .sms_text .sms_btn {}
+#wrap main .shilla_membership_wrap .mbmbership_s .sms_text .sms_img {}
+#wrap main .shilla_membership_wrap .mbmbership_s .sms_text .sms_img img {}
+#wrap main .shilla_membership_wrap .mbmbership_rewards {}
+#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text {}
+#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text p {}
+#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text a {}
+#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text .smr_img {}
+#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text .smr_img img {}
 /* ==================================footer */
 #wrap footer {}
+#wrap footer h1 {}
+#wrap footer h1 a {}
+#wrap footer h1 a img {}
+#wrap footer .footer_top {}
+#wrap footer .footer_top .ft_upper {}
+#wrap footer .footer_top .ft_upper .ft_logo {}
+#wrap footer .footer_top .ft_upper .ft_logo a {}
+#wrap footer .footer_top .ft_upper .ft_logo a img {}
+#wrap footer .footer_top .ft_upper .sns {}
+#wrap footer .footer_top .ft_upper .sns a {}
+#wrap footer .footer_top .ft_upper .sns a img {}
+#wrap footer .footer_top .ft_down {}
+#wrap footer .footer_top .ft_down .ftd_text1 {}
+#wrap footer .footer_top .ft_down .ftd_text1 a {}
+#wrap footer .footer_top .ft_down .ftd_text2 a {}
+#wrap footer .footer_bottom {}
+#wrap footer .footer_bottom address {}
+#wrap footer .footer_bottom address p {}
+#wrap footer .footer_bottom address a {}
+#wrap footer .footer_bottom .lsms {}
+#wrap footer .footer_bottom .lsms .lsms_img {}
+#wrap footer .footer_bottom .lsms .lsms_img img {}
+#wrap footer .footer_bottom .lsms p {}
