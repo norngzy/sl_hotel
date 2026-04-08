@@ -1,6 +1,6 @@
 /* 전체타이틀 */
 #wrap main .room_wrap .room_title,
-#wrap main .dining_wrap .dining_titlem,
+#wrap main .dining_wrap .dining_title,
 #wrap main .dining_wrap .special_offers_title,
 #wrap main .shilla_membership_wrap .mbmbership_s .sms_text_title,
 #wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title {}
@@ -14,3 +14,18 @@
 #wrap main .dining_wrap .special_offers_title h1+p,
 #wrap main .shilla_membership_wrap .mbmbership_s .sms_text_title h1+p,
 #wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title h1+p {}
+/* 1-2.예약폼 */
+#wrap main .hero_wrap #reservation_form .place h2,
+#wrap main .hero_wrap #reservation_form .check_in h2,
+#wrap main .hero_wrap #reservation_form .check_out h2,
+#wrap main .hero_wrap #reservation_form .hotel_room h2,
+#wrap main .hero_wrap #reservation_form .adult h2,
+#wrap main .hero_wrap #reservation_form .children .children_title h2,
+#wrap main .hero_wrap #reservation_form .child .child_title h2 {}
+#wrap main .hero_wrap #reservation_form .check_in h2 .date,
+#wrap main .hero_wrap #reservation_form .night .sleep,
+#wrap main .hero_wrap #reservation_form .check_out .date,
+#wrap main .hero_wrap #reservation_form .hotel_room #room_num,
+#wrap main .hero_wrap #reservation_form .adult h2 #adult_num,
+#wrap main .hero_wrap #reservation_form .children #children_num,
+#wrap main .hero_wrap #reservation_form .child #child_num {}
