@@ -1,25 +1,78 @@
-#wrap {}
+#wrap {width: 1920px; height: 100vh;}
 /* ==================================header */
-#wrap header {}
-#wrap header .h_top {}
-#wrap header .h_top li {}
-#wrap header .h_top li a {}
-#wrap header .h_top .language {}
-#wrap header .h_top .language p {}
-#wrap header .h_top .language a {}
-#wrap header .h_top .language a img {}
-#wrap header .h_top .language .language_more {}
-#wrap header .h_top .language .language_more a {}
-#wrap header .h_bottom {}
+#wrap header {
+    position: absolute; top: 0; left: 0;
+    width: 1920px; z-index: 999;     
+    background-color: transparent;
+}
+#wrap header .h_top {
+    display: flex; flex-flow: row nowrap; gap:20px;
+    justify-content: flex-end;
+    padding: 20px 299px 20px 0;
+}
+#wrap header .h_top li {position: relative;}
+#wrap header .h_top li:nth-child(1)::after{
+    content: ''; display: block;
+    width: 1px; height: 7px; background: #fff;
+    position: absolute; top: 5px; left: 45px;
+}
+#wrap header .h_top li:nth-child(2)::after{
+    content: ''; display: block;
+    width: 1px; height: 7px; background: #fff;
+    position: absolute; top: 5px; left: 55px;
+}
+#wrap header .h_top li a {
+    color: #fff; font-size: 0.88rem;
+}
+#wrap header .h_top .language {
+    position: relative;
+    display: inline-flex;
+}
+#wrap header .h_top .language p {
+    color: #fff; font-size: 0.88rem; margin-right: 5px;
+}
+#wrap header .h_top .language > a {
+    display: block;
+    width: 10px; height: 14px;
+}
+#wrap header .h_top .language a img {width: 100%;}
+#wrap header .h_top .language .language_more {
+    display: none; 
+    position: absolute; left:60px; top:-10px;
+    background-color: #D9D9D9; 
+    padding: 10px; z-index: 100;
+}
+#wrap header .h_top .language:hover .language_more {
+    display: block;
+}
+#wrap header .h_top .language .language_more a {
+    padding-bottom: 10px; display: block;
+}
+#wrap header .h_bottom {
+    height: 50px;
+    padding: 0 300px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+}
 #wrap header .h_bottom .main_logo {}
 #wrap header .h_bottom .main_logo a {}
-#wrap header .h_bottom .main_logo a img {}
+#wrap header .h_bottom .main_logo a img {width: 100%;}
 #wrap header .h_bottom nav {}
-#wrap header .h_bottom nav .gnb {}
+#wrap header .h_bottom nav .gnb {
+    display: flex; flex-flow: row nowrap; gap: 50px;
+}
 #wrap header .h_bottom nav .gnb li {}
-#wrap header .h_bottom nav .gnb li a {}
-#wrap header .h_bottom nav .gnb li a img {}
-#wrap header .h_bottom nav .gnb li .depth_bg {}
+#wrap header .h_bottom nav .gnb li a {
+    display: block; 
+    position: relative; 
+    font-size: 1.25rem; color: #fff;
+}
+#wrap header .h_bottom nav .gnb li a p {
+    width: 20px;
+    position: absolute; top:0; left: 75px; 
+}
+#wrap header .h_bottom nav .gnb li a p img {width: 100%;}
+#wrap header .h_bottom nav .gnb li .depth_bg {display: none;}
 #wrap header .h_bottom nav .gnb li .depth_bg h2 {}
 #wrap header .h_bottom nav .gnb li .depth_bg .gnb_depth2 {}
 #wrap header .h_bottom nav .gnb li .depth_bg .gnb_depth2 li {}
@@ -31,54 +84,119 @@
 #wrap main {}
 /* 1-1.히어로배너 */
 #wrap main .hero_wrap {}
-#wrap main .hero_wrap .hero {}
-#wrap main .hero_wrap .hero .prev {}
-#wrap main .hero_wrap .hero .next {}
+#wrap main .hero_wrap .hero {height: 100vh;}
+#wrap main .hero_wrap .hero .prev {
+    background-image: url(../images/prev_w.png);
+    background-size: contain;
+    position: absolute; left: 622px; top: 609px;
+    width: 32px; height: 32px;
+}
+#wrap main .hero_wrap .hero .next {
+    background-image: url(../images/next_w.png);
+    background-size: contain;
+        position: absolute; right: 622px; top: 609px;
+    width: 32px; height: 32px;
+}
+#wrap main .hero_wrap .hero .prev svg,
+#wrap main .hero_wrap .hero .next svg {display: none;}
 #wrap main .hero_wrap .hero .swiper-wrapper {}
-#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide {}
-#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide .banner_title {}
-#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide .banner_title p {}
-#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide .banner_title h1 {}
-#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide h2 {}
-#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide p {}
-#wrap main .hero_wrap .hero .swiper-wrapper .slide1 {}
-#wrap main .hero_wrap .hero .swiper-wrapper .slide2 {}
-#wrap main .hero_wrap .hero .swiper-wrapper .slide3 {}
+#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide::before {
+    content: ""; position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.3); 
+    z-index: -1; 
+}
+#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide {
+    background-size: cover;  background-position: center 70%;
+    text-align: center; padding-top: 480px;
+}
+#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide .banner_title {
+    padding-bottom: 20px;
+}
+#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide .banner_title p {
+    font-size: 0.63rem; color: #fff; background-color: #3F2B2D;
+    width: 100px; height: 20px; border-radius: 5px; margin: 0 auto; padding: 5px 0;
+}
+#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide .banner_title h1 {
+    font-size: 2.19rem; font-weight: 500; padding-top: 10px; color: #fff;
+}
+#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide h2 {
+    font-size: 1.56rem; padding-bottom: 20px; color: #fff;
+}
+#wrap main .hero_wrap .hero .swiper-wrapper .swiper-slide h2+p {
+    font-size: 0.94rem; font-weight: 300; color: #fff;
+}
+#wrap main .hero_wrap .hero .swiper-wrapper .slide1 {background-image: url(../images/main1.jpg);}
+#wrap main .hero_wrap .hero .swiper-wrapper .slide2 {background-image: url(../images/main2.jpg);}
+#wrap main .hero_wrap .hero .swiper-wrapper .slide3 {background-image: url(../images/main3.jpg);}
 /* 1-2.예약폼 */
-#wrap main .hero_wrap #reservation_form {}
+#wrap main .hero_wrap #reservation_form {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+    width: 1320px; padding: 30px 25px;
+    position: absolute; bottom: 100px; left: 310px; z-index: 999;     
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+}
 #wrap main .hero_wrap #reservation_form .place {}
+#wrap main .hero_wrap #reservation_form .place h2 {
+    font-size: 0.88rem; padding-bottom: 10px;
+}
 #wrap main .hero_wrap #reservation_form .place .search_form {}
-#wrap main .hero_wrap #reservation_form .place .search_form #place_form {}
-#wrap main .hero_wrap #reservation_form .place .search_form .place_search {}
-#wrap main .hero_wrap #reservation_form .place .search_form .place_search img {}
+#wrap main .hero_wrap #reservation_form .place .search_form #place_form {
+    width: 240px; height: 42px; padding: 0 12px; border-radius: 5px;
+}
+#wrap main .hero_wrap #reservation_form .place .search_form .place_search {
+    width: 20px; position: absolute; left: 235px; top: 50%;
+}
+#wrap main .hero_wrap #reservation_form .place .search_form .place_search img {width: 100%;}
 #wrap main .hero_wrap #reservation_form .check_in {}
 #wrap main .hero_wrap #reservation_form .night {}
-#wrap main .hero_wrap #reservation_form .night .moon {}
-#wrap main .hero_wrap #reservation_form .night .moon img {}
+#wrap main .hero_wrap #reservation_form .night .moon {width: 24px; padding-bottom: 6px;}
+#wrap main .hero_wrap #reservation_form .night .moon img {width: 100%;}
 #wrap main .hero_wrap #reservation_form .check_out {}
 #wrap main .hero_wrap #reservation_form .hotel_room {}
 #wrap main .hero_wrap #reservation_form .adult {}
 #wrap main .hero_wrap #reservation_form .children {}
-#wrap main .hero_wrap #reservation_form .children .children_title {}
-#wrap main .hero_wrap #reservation_form .children .children_title .info_icon {}
-#wrap main .hero_wrap #reservation_form .children .children_title .info_icon img {}
+#wrap main .hero_wrap #reservation_form .children .children_title .info_icon img {width: 100%;}
 #wrap main .hero_wrap #reservation_form .children .children_title .children_info {}
-#wrap main .hero_wrap #reservation_form .children .children_title .children_info p {}
+#wrap main .hero_wrap #reservation_form .children .children_title .children_info p {
+    display: none; position: absolute ; right:40px; top: 10px;
+    font-size: 0.63rem; font-weight: 300; background-color: #fff; padding: 5px;
+}
 #wrap main .hero_wrap #reservation_form .child {}
-#wrap main .hero_wrap #reservation_form .child .child_title {}
-#wrap main .hero_wrap #reservation_form .child .child_title .info_icon {}
-#wrap main .hero_wrap #reservation_form .child .child_title .info_icon img {}
+#wrap main .hero_wrap #reservation_form .child .child_title .info_icon img {width: 100%;}
 #wrap main .hero_wrap #reservation_form .child .child_title .child_info {}
-#wrap main .hero_wrap #reservation_form .child .child_title .child_info p {}
-#wrap main .hero_wrap #reservation_form #search_btn {}
+#wrap main .hero_wrap #reservation_form .child .child_title .child_info p {
+    display: none; position: absolute ; right:60px; top: 10px;
+    font-size: 0.63rem; font-weight: 300; background-color: #fff; padding: 5px;
+}
+#wrap main .hero_wrap #reservation_form #search_btn {
+    color: #fff; background-color: #3F2B2D; width: 120px; height: 50px; font-size: 1.25rem;
+}
 /* 2.신라소개 */
-#wrap main .hotel_info {}
-#wrap main .hotel_info h1 {}
+#wrap main .hotel_info {
+    width: 1920px; text-align: center; padding: 100px 0;
+}
+#wrap main .hotel_info h1 {
+    font-size: 2.19rem; color: #3F2B2D; font-weight: 500; padding-bottom: 30px;
+}
+#wrap main .hotel_info h1::after {
+    content: ''; width: 120px; height: 1px; background-color: #CCC; 
+    display: block; margin: 30px auto;
+}
 #wrap main .hotel_info .more_info {}
-#wrap main .hotel_info .more_info p:nth-child(1) {}
-#wrap main .hotel_info .more_info p:nth-child(2) {}
+#wrap main .hotel_info .more_info p:nth-child(1) {
+    font-size: 1.25rem; font-weight: 400; padding-bottom: 10px;
+}
+#wrap main .hotel_info .more_info p:nth-child(2) {
+    font-size: 0.88rem; line-height: 2.0;
+}
 /* 3.객실 */
-#wrap main .room_wrap {}
+#wrap main .room_wrap {
+    width: 1920px; padding: 0 160px;
+}
 #wrap main .room_wrap .room_swiper {}
 #wrap main .room_wrap .room_swiper .prev {}
 #wrap main .room_wrap .room_swiper .next {}

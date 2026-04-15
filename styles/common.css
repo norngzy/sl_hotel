@@ -3,29 +3,43 @@
 #wrap main .dining_wrap .dining_title,
 #wrap main .dining_wrap .special_offers_title,
 #wrap main .shilla_membership_wrap .mbmbership_s .sms_text_title,
-#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title {}
+#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title {
+    display: flex; flex-flow: row nowrap; padding-bottom: 10px;
+    align-items: flex-end; gap: 20px;
+}
 #wrap main .room_wrap .room_title h1,
 #wrap main .dining_wrap .dining_title h1,
 #wrap main .dining_wrap .special_offers_title h1,
 #wrap main .shilla_membership_wrap .mbmbership_s .sms_text_title h1,
-#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title h1 {}
+#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title h1 {
+    font-size: 2.19rem; 
+}
 #wrap main .room_wrap .room_title h1+p,
 #wrap main .dining_wrap .dining_title h1+p,
 #wrap main .dining_wrap .special_offers_title h1+p,
 #wrap main .shilla_membership_wrap .mbmbership_s .sms_text_title h1+p,
-#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title h1+p {}
+#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title h1+p {
+    font-size: 1.25rem; font-weight: 300; color: #555;
+}
 /* 1-2.예약폼 */
-#wrap main .hero_wrap #reservation_form .place h2,
 #wrap main .hero_wrap #reservation_form .check_in h2,
 #wrap main .hero_wrap #reservation_form .check_out h2,
 #wrap main .hero_wrap #reservation_form .hotel_room h2,
 #wrap main .hero_wrap #reservation_form .adult h2,
 #wrap main .hero_wrap #reservation_form .children .children_title h2,
-#wrap main .hero_wrap #reservation_form .child .child_title h2 {}
-#wrap main .hero_wrap #reservation_form .check_in h2 .date,
+#wrap main .hero_wrap #reservation_form .child .child_title h2 {
+    font-size: 0.88rem; padding-bottom: 20px;
+}
+#wrap main .hero_wrap #reservation_form .check_in .date,
 #wrap main .hero_wrap #reservation_form .night .sleep,
-#wrap main .hero_wrap #reservation_form .check_out .date,
+#wrap main .hero_wrap #reservation_form .check_out .date {font-size: 1.25rem;}
 #wrap main .hero_wrap #reservation_form .hotel_room #room_num,
-#wrap main .hero_wrap #reservation_form .adult h2 #adult_num,
+#wrap main .hero_wrap #reservation_form .adult #adult_num,
 #wrap main .hero_wrap #reservation_form .children #children_num,
-#wrap main .hero_wrap #reservation_form .child #child_num {}
+#wrap main .hero_wrap #reservation_form .child #child_num {
+    font-size: 1.25rem; text-align: center; width: 33px;
+}
+#wrap main .hero_wrap #reservation_form .children .children_title,
+#wrap main .hero_wrap #reservation_form .child .child_title {display: flex; flex-flow: row nowrap; gap: 5px;}
+#wrap main .hero_wrap #reservation_form .children .children_title .info_icon,
+#wrap main .hero_wrap #reservation_form .child .child_title .info_icon {display: inline-block; width: 12px;}
