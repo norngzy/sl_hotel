@@ -1,13 +1,13 @@
-#wrap {width: 1920px; height: 100vh;}
-/* ==================================header */
+#wrap {max-width: 1920px;}
+/* ======================================= header */
 #wrap header {
-    position: absolute; top: 0; left: 0;
-    width: 1920px; z-index: 999;     
+    position: absolute; top: 0; left: 0; z-index: 999;     
     background-color: transparent;
+    width: 1920px;
 }
 #wrap header .h_top {
     display: flex; flex-flow: row nowrap; gap:20px;
-    justify-content: flex-end;
+    justify-content: flex-end; align-items: center;
     padding: 20px 299px 20px 0;
 }
 #wrap header .h_top li {position: relative;}
@@ -67,11 +67,14 @@
     position: relative; 
     font-size: 1.25rem; color: #fff;
 }
-#wrap header .h_bottom nav .gnb li a p {
+#wrap header .h_bottom nav .gnb li a p {/* 호텔찾기 */ 
+    color: #fff; margin-right: 20px;
+}
+#wrap header .h_bottom nav .gnb li a .search_icon {
     width: 20px;
     position: absolute; top:0; left: 75px; 
 }
-#wrap header .h_bottom nav .gnb li a p img {width: 100%;}
+#wrap header .h_bottom nav .gnb li a .search_icon img {width: 100%;}
 #wrap header .h_bottom nav .gnb li .depth_bg {display: none;}
 #wrap header .h_bottom nav .gnb li .depth_bg h2 {}
 #wrap header .h_bottom nav .gnb li .depth_bg .gnb_depth2 {}
@@ -80,9 +83,9 @@
 #wrap header .h_bottom nav .gnb li .depth_bg .gnb_depth2 li .gnb_depth3 {}
 #wrap header .h_bottom nav .gnb li .depth_bg .gnb_depth2 li .gnb_depth3 li {}
 #wrap header .h_bottom nav .gnb li .depth_bg .gnb_depth2 li .gnb_depth3 li a {}
-/* ==================================main */
+/*  ======================================= main */
 #wrap main {}
-/* 1-1.히어로배너 */
+/* ======================================= 1-1.히어로배너 */
 #wrap main .hero_wrap {}
 #wrap main .hero_wrap .hero {height: 100vh;}
 #wrap main .hero_wrap .hero .prev {
@@ -94,7 +97,7 @@
 #wrap main .hero_wrap .hero .next {
     background-image: url(../images/next_w.png);
     background-size: contain;
-        position: absolute; right: 622px; top: 609px;
+    position: absolute; right: 622px; top: 609px;
     width: 32px; height: 32px;
 }
 #wrap main .hero_wrap .hero .prev svg,
@@ -130,7 +133,7 @@
 #wrap main .hero_wrap .hero .swiper-wrapper .slide1 {background-image: url(../images/main1.jpg);}
 #wrap main .hero_wrap .hero .swiper-wrapper .slide2 {background-image: url(../images/main2.jpg);}
 #wrap main .hero_wrap .hero .swiper-wrapper .slide3 {background-image: url(../images/main3.jpg);}
-/* 1-2.예약폼 */
+/*  ======================================= 1-2.예약폼 */
 #wrap main .hero_wrap #reservation_form {
     display: flex; flex-flow: row nowrap;
     justify-content: space-between; align-items: center;
@@ -175,7 +178,7 @@
 #wrap main .hero_wrap #reservation_form #search_btn {
     color: #fff; background-color: #3F2B2D; width: 120px; height: 50px; font-size: 1.25rem;
 }
-/* 2.신라소개 */
+/* =======================================  2.신라소개 */
 #wrap main .hotel_info {
     width: 1920px; text-align: center; padding: 100px 0;
 }
@@ -193,67 +196,165 @@
 #wrap main .hotel_info .more_info p:nth-child(2) {
     font-size: 0.88rem; line-height: 2.0;
 }
-/* 3.객실 */
+/*  ======================================= 3.객실 */
 #wrap main .room_wrap {
     width: 1920px; padding: 0 160px;
 }
 #wrap main .room_wrap .room_swiper {}
-#wrap main .room_wrap .room_swiper .prev {}
-#wrap main .room_wrap .room_swiper .next {}
+#wrap main .room_wrap .room_swiper .prev {
+    background-image: url(../images/prev_b.png);
+    background-size: contain;
+    position: absolute; left: 438px; top: 50%; 
+    width: 32px; height: 32px;
+}
+#wrap main .room_wrap .room_swiper .next {
+    background-image: url(../images/next_b.png);
+    background-size: contain;
+    position: absolute; right: 438px; top: 50%;
+    width: 32px; height: 32px;
+}
+#wrap main .room_wrap .room_swiper .prev svg,
+#wrap main .room_wrap .room_swiper .next svg {display: none;}
 #wrap main .room_wrap .room_swiper .swiper-wrapper {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide a {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide a img {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .main_text {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .main_text .mt_title {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .main_text .mt_title h2 {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .main_text .mt_title p {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .main_text .mt_room a {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .main_text .mt_more {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .main_text .mt_more a {}
-#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .main_text .mt_more a img {}
-/* 4.다이닝 */
-#wrap main .dining_wrap {}
-#wrap main .dining_wrap .dining_main_tap {}
-#wrap main .dining_wrap .dining_main_tap .active {}
-#wrap main .dining_wrap .dining_main_tap a {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide {
+    display: flex; flex-flow: row nowrap; gap: 100px;
+    margin-top: 40px;
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .subimg1,
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .subimg2 {
+    width: 400px; height: 400px; display: block; margin-top: 157px;
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .subimg1 img,
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .subimg2 img {width:100%; height: 100%;}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main {width: 600px;}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .mainimg {
+    width: 600px; height: 500px; display: block; 
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .mainimg img {width:100%; height: 100%;}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text {
+    text-align: center; margin: 30px 0;
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_title {padding-bottom: 30px;}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_title h2 {
+    font-size: 1.88rem;  padding-bottom: 10px; 
+    font-family: "Source Serif 4", serif;
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_title h2+p {font-size: 1.25rem;}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_room {
+    display: flex; flex-flow: row nowrap; padding-bottom: 30px; justify-content: center;
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_room a::after {
+    content: ''; display: block;
+    width: 1px; height: 8px; background: #d9d9d9;
+    position: absolute; top: 50%; right:0; transform: translateY(-50%);
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_room a:last-child::after {display: none;}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_room a {
+    font-size: 0.95rem; font-weight: 300; position: relative; padding:0 17px;
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_more {}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_more a {
+    border-bottom: 1px solid #ccc; padding-bottom: 5px;
+    display: inline-flex; flex-flow: row nowrap; justify-content: center; gap: 5px;
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_more a p {
+    font-size: 0.75rem; font-weight: 300;
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_more a .moreimg {
+    width: 14px; display: block; 
+}
+#wrap main .room_wrap .room_swiper .swiper-wrapper .swiper-slide .room_main .main_text .mt_more a .moreimg img {width: 100%;}
+/*  ======================================= 4.다이닝 */
+#wrap main .dining_wrap {
+    width: 1920px; padding: 70px 160px 100px 160px;
+}
+#wrap main .dining_wrap .dining_tap_menu {
+    display: flex; flex-flow: row nowrap;
+    margin: 30px 0;  justify-content: space-between;
+}
+#wrap main .dining_wrap .dining_tap_menu .dining_main_tap {}
+#wrap main .dining_wrap .dining_tap_menu .dining_main_tap .active {
+    font-weight: 600; background-color: #f5f5f5; border-radius: 5px;
+    padding: 10px 20px; 
+}
+#wrap main .dining_wrap .dining_tap_menu .dining_main_tap > a {
+    font-size: 1.25rem; font-weight: 400; padding: 10px 0; margin-right: 30px;
+    font-family: "Source Serif 4", serif;  border: 1px solid #f5f5f5; border-radius: 5px;
+}
+#wrap main .dining_wrap .dining_tap_menu .dining_sub_tap {}
+#wrap main .dining_wrap .dining_tap_menu .dining_sub_tap .active {
+    font-weight: 600; border-bottom: 1px solid #ccc; padding-bottom: 5px; display: inline-block;
+}
+#wrap main .dining_wrap .dining_tap_menu .dining_sub_tap > a:nth-child(5) {margin-right: 0;}
+#wrap main .dining_wrap .dining_tap_menu .dining_sub_tap > a:nth-child(5)::after {display: none;}
+#wrap main .dining_wrap .dining_tap_menu .dining_sub_tap > a::after {
+    content: ''; display: block;
+    width: 1px; height: 8px; background: #d9d9d9; bottom: -5px;
+    position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+}
+#wrap main .dining_wrap .dining_tap_menu .dining_sub_tap > a {
+    font-size: 0.95rem; font-weight: 400; padding: 0 34px;
+    font-family: "Source Serif 4", serif; position: relative; 
+}
+
 #wrap main .dining_wrap .dining_contents {}
+/*  ======================================= 4-1.다이닝 레스토랑*/
 #wrap main .dining_wrap .dining_contents .restaurant {}
-#wrap main .dining_wrap .dining_contents .restaurant .dining_sub_tap {}
-#wrap main .dining_wrap .dining_contents .restaurant .dining_sub_tap .active {}
-#wrap main .dining_wrap .dining_contents .restaurant .dining_sub_tap a {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg p {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg p img {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details .cd_text {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details .cd_text h1 {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details .cd_text .cd_sub {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details .cd_text .cd_place {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details .cd_text .cd_time {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details .cd_text .cd_call {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details .cd_img {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details .cd_img p {}
-#wrap main .dining_wrap .dining_contents .restaurant .restaurant_contents .contents_bg .contents_details .cd_img p img {}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg {
+    display: flex; flex-flow: row nowrap;  gap: 40px;
+    padding: 30px; background-color: #f5f5f5;
+}
+#wrap main .dining_wrap .dining_contents .restaurant .ly,
+#wrap main .dining_wrap .dining_contents .restaurant .ps,
+#wrap main .dining_wrap .dining_contents .restaurant .ari,
+#wrap main .dining_wrap .dining_contents .restaurant .conti {display: none;}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .c_main_img {width: 800px; height: 519px;}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .c_main_img img {width: 100%; height: 100%;}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details {
+    padding: 0 85px;
+}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details .cd_text {}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details .cd_text h1 {
+    font-family: "Source Serif 4", serif;
+    font-size: 1.88rem; font-weight: 600; padding-bottom: 10px;
+}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details .cd_text .cd_sub {
+    font-size: 1.25rem; padding-bottom: 30px;
+}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details .cd_text .cd_place {
+    font-size: 0.94rem; font-weight: 300; padding-bottom: 30px;
+}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details .cd_text .cd_time {
+    font-size: 0.94rem; padding-bottom: 92px;
+}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details .cd_text .cd_call {
+    font-size: 0.75rem; font-weight: 300;  padding-bottom: 30px;
+}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details .cd_img {
+    width: 100%; display: flex; flex-flow: row nowrap; gap:30px;
+}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details .cd_img p {width: 250px; height: 250px;}
+#wrap main .dining_wrap .dining_contents .restaurant .contents_bg .contents_details .cd_img p img {width: 100%; height: 100%;}
+/*  ======================================= 4-2.다이닝 라운지&바*/
 #wrap main .dining_wrap .dining_contents .loungebar {}
-#wrap main .dining_wrap .dining_contents .loungebar .dining_sub_tap {}
-#wrap main .dining_wrap .dining_contents .loungebar .dining_sub_tap .active {}
-#wrap main .dining_wrap .dining_contents .loungebar .dining_sub_tap a {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg p {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg p img {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details .cd_text {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details .cd_text h1 {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details .cd_text .cd_sub {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details .cd_text .cd_place {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details .cd_text .cd_time {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details .cd_text .cd_call {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details .cd_img {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details .cd_img p {}
-#wrap main .dining_wrap .dining_contents .loungebar .loungebar_contents .contents_bg .contents_details .cd_img img {}
-#wrap main .dining_wrap .dining_contents .bakary {}
+#wrap main .dining_wrap .dining_contents .loungebar .library,
+#wrap main .dining_wrap .dining_contents .loungebar .distillers,
+#wrap main .dining_wrap .dining_contents .loungebar .exe_lounge {display: none;}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg p {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg p img {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details .cd_text {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details .cd_text h1 {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details .cd_text .cd_sub {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details .cd_text .cd_place {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details .cd_text .cd_time {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details .cd_text .cd_call {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details .cd_img {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details .cd_img p {}
+#wrap main .dining_wrap .dining_contents .loungebar .contents_bg .contents_details .cd_img img {}
+/*  ======================================= 4-3.다이닝 베이커리*/
+#wrap main .dining_wrap .dining_contents .bakary {display: none;}
 #wrap main .dining_wrap .dining_contents .contents_bg {}
 #wrap main .dining_wrap .dining_contents .contents_bg p {}
 #wrap main .dining_wrap .dining_contents .contents_bg p img {}
@@ -267,13 +368,13 @@
 #wrap main .dining_wrap .dining_contents .contents_bg .contents_details .cd_img {}
 #wrap main .dining_wrap .dining_contents .contents_bg .contents_details .cd_img p {}
 #wrap main .dining_wrap .dining_contents .contents_bg .contents_details .cd_img p img {}
-/* 5.신라숍배너 */
+/*  ======================================= 5.신라숍배너 */
 #wrap main .shop_banner_wrap {}
 #wrap main .shop_banner_wrap h1 {}
 #wrap main .shop_banner_wrap h1+p {}
 #wrap main .shop_banner_wrap .shop_box {}
 #wrap main .shop_banner_wrap .shop_box p {}
-/* 6.스페셜오퍼 */
+/*  ======================================= 6.스페셜오퍼 */
 #wrap main .special_offers_wrap {}
 #wrap main .special_offers_wrap .offer_swiper {}
 #wrap main .special_offers_wrap .offer_swiper .swiper-wrapper {}
@@ -286,7 +387,7 @@
 #wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide .offers_text h2 a {}
 #wrap main .special_offers_wrap .offer_swiper .swiper-wrapper .swiper-slide .offers_text .event_date {}
 #wrap main .special_offers_wrap .offer_swiper .progressbar {}
-/* 7.멤버십 */
+/* =======================================  7.멤버십 */
 #wrap main .shilla_membership_wrap {}
 #wrap main .shilla_membership_wrap .mbmbership_s {}
 #wrap main .shilla_membership_wrap .mbmbership_s .sms_text {}
