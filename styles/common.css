@@ -1,30 +1,30 @@
-/* 전체타이틀 */
+/*  =======================================  전체타이틀 */
 #wrap main .room_wrap .room_title,
 #wrap main .dining_wrap .dining_title,
-#wrap main .dining_wrap .special_offers_title,
-#wrap main .shilla_membership_wrap .mbmbership_s .sms_text_title,
-#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title {
+#wrap main .special_offers_wrap .special_offers_title,
+#wrap main .shilla_membership_wrap .membership_s .sms_text_title,
+#wrap main .shilla_membership_wrap .membership_rewards .smr_text_title {
     display: flex; flex-flow: row nowrap; padding-bottom: 10px;
     align-items: flex-end; gap: 20px; padding-bottom: 10px;
     border-bottom: 1px solid #ccc; 
 }
 #wrap main .room_wrap .room_title h1,
 #wrap main .dining_wrap .dining_title h1,
-#wrap main .dining_wrap .special_offers_title h1,
-#wrap main .shilla_membership_wrap .mbmbership_s .sms_text_title h1,
-#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title h1 {
+#wrap main .special_offers_wrap .special_offers_title h1,
+#wrap main .shilla_membership_wrap .membership_s .sms_text_title h1,
+#wrap main .shilla_membership_wrap .membership_rewards .smr_text_title h1 {
     font-size: 2.19rem; 
     font-family: "Source Serif 4", serif;
 }
 #wrap main .room_wrap .room_title h1+p,
 #wrap main .dining_wrap .dining_title h1+p,
-#wrap main .dining_wrap .special_offers_title h1+p,
-#wrap main .shilla_membership_wrap .mbmbership_s .sms_text_title h1+p,
-#wrap main .shilla_membership_wrap .mbmbership_rewards .smr_text_title h1+p {
+#wrap main .special_offers_wrap .special_offers_title h1+p,
+#wrap main .shilla_membership_wrap .membership_s .sms_text_title h1+p,
+#wrap main .shilla_membership_wrap .membership_rewards .smr_text_title h1+p {
     font-size: 1.25rem; font-weight: 300; color: #555;
     font-family: "Source Serif 4", serif;
 }
-/* 1-2.예약폼 */
+/*  =======================================  1-2.예약폼 */
 #wrap main .hero_wrap #reservation_form .check_in h2,
 #wrap main .hero_wrap #reservation_form .check_out h2,
 #wrap main .hero_wrap #reservation_form .hotel_room h2,
@@ -46,3 +46,37 @@
 #wrap main .hero_wrap #reservation_form .child .child_title {display: flex; flex-flow: row nowrap; gap: 5px;}
 #wrap main .hero_wrap #reservation_form .children .children_title .info_icon,
 #wrap main .hero_wrap #reservation_form .child .child_title .info_icon {display: inline-block; width: 12px;}
+/*  =======================================  4.다이닝 */
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide {
+    display: flex; flex-flow: row nowrap;  gap: 40px;
+    padding: 30px; background-color: #f5f5f5;
+}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .c_main_img {width: 800px; height: 519px;}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .c_main_img img {
+    width: 100%; height: 100%; object-fit: cover;/* 이미지중앙에배치 */
+}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details {padding: 0 85px;}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details .cd_text {}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details .cd_text h1 {
+    font-family: "Source Serif 4", serif;
+    font-size: 1.88rem; font-weight: 600; padding-bottom: 10px;
+}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details .cd_text .cd_sub {
+    font-size: 1.25rem; padding-bottom: 30px;
+}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details .cd_text .cd_place {
+    font-size: 0.94rem; font-weight: 300; padding-bottom: 15px;
+}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details .cd_text .cd_time {
+    font-size: 0.94rem; line-height: 1.5;
+}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details .cd_text .cd_call {
+    font-size: 0.75rem; font-weight: 300;  padding-bottom: 30px;
+}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details .cd_img {
+    width: 100%; display: flex; flex-flow: row nowrap; gap:30px; 
+}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details .cd_img p {width: 250px; height: 250px;}
+#wrap main .dining_wrap .dining_contents .swiper .swiper-wrapper .swiper-slide .contents_details .cd_img p img {
+    width: 100%; height: 100%;  object-fit: cover;/* 이미지중앙에배치 */
+}
