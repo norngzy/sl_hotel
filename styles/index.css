@@ -257,10 +257,12 @@
 #wrap main .shop_banner_wrap h1 {
     padding-bottom: 20px;  color: #fff;
     font-size: 1.88rem; font-weight: 600; font-family: "Source Serif 4", serif;
+    text-align: center;
 }
 #wrap main .shop_banner_wrap h1+p {
     padding-bottom: 20px;  color: #fff;
     font-size: 1.25rem; font-family: "Source Serif 4", serif;
+    text-align: center;
 }
 #wrap main .shop_banner_wrap .shop_box {
     display: flex; flex-flow: row nowrap; gap:30px; 
@@ -274,7 +276,7 @@
     justify-content: center; align-items: center;
 }
 /*  ======================================= 6.스페셜오퍼 */
-#wrap main .special_offers_wrap {   width: 100%;  min-width:1920px;
+#wrap main .special_offers_wrap {  width: 100%;  min-width:1920px;
     padding: 100px 160px 0 160px;
 }
 #wrap main .special_offers_wrap .offer_swiper {position: relative;}
